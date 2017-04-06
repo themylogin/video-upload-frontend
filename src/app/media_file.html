@@ -1,0 +1,16 @@
+<div class="container">
+    <div ng-if="mediaFile">
+        <a href="#/!">← Back to uploads</a>
+
+        <h1>Media file #{{ mediaFile.id }}</h1>
+
+        <h2>Variants</h2>
+
+        <ul>
+            <li ng-repeat="( name, variant ) in mediaFile.variants">
+                <a ng-if="variant.url" href="{{ variant.url }}">{{ name }}</a>
+                <b ng-if="!variant.url">{{ name }}</b>
+            </li>
+        </ul>
+    </div>
+</div>
